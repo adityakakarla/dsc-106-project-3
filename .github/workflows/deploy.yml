@@ -19,23 +19,21 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
- node-version: 20
- cache: pnpm
+          node-version: 20  # Fix indentation here
+          cache: pnpm
 
       - name: Install dependencies
         run: pnpm install
 
-      - name: build
+      - name: Build
         env:
- BASE_PATH: '/${{ github.event.repository.name }}'
-        run: |
- pnpm run build
+          BASE_PATH: '/${{ github.event.repository.name }}'  # Fix indentation here
+        run: pnpm run build
 
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
         with:
- # this should match the `pages` option in your adapter-static options
- path: 'build/'
+          path: 'build/'  # Fix indentation here
 
   deploy:
     needs: build_site
