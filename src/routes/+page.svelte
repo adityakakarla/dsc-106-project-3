@@ -288,7 +288,7 @@
           </p>
         </div>
         <div>
-          <p class="text-sm text-gray-600 text-center">Sum Of Average {getNutrientLabel(selectedNutrient)} For Selected Hours:</p>
+          <p class="text-sm text-gray-600 text-center">Average {getNutrientLabel(selectedNutrient)} For Selected Hours:</p>
           <p class="summary-value text-center">
             {selectedValue.toFixed(2)} {nutrientOptions.find(opt => opt.value === selectedNutrient)?.unit}
           </p>
