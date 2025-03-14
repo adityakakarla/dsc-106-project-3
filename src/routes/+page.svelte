@@ -250,10 +250,9 @@
   }
 </style>
 
-<div
-  class="absolute inset-0 -z-10 h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#880808_100%)]"
->
-  <div class="flex h-full w-full flex-col items-center p-10">
+<!-- Gradient background container - includes chart and extends slightly below -->
+<div class="w-full [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#880808_100%)]">
+  <div class="flex w-full flex-col items-center p-10">
     <h1 class="mt-10 text-4xl font-bold text-gray-800 text-center">Why The Melt Stays Open Until 3AM:<br/>An Analysis of Late-Night Snacking</h1>
     <p class='mt-4 text-center'>A nutritional analysis of 32 weeks of food logs from Prof. Jessilynn Dunn<br/> at Duke University to understand average hourly eating patterns.</p>
 
@@ -278,7 +277,15 @@
     </div>
 
     <div id="chart"></div>
+    
+    <!-- Add padding at the bottom to extend the gradient -->
+    <div class="h-16"></div>
+  </div>
+</div>
 
+<!-- Outside the gradient - white background -->
+<div class="w-full bg-white mt-[-4rem]">
+  <div class="flex flex-col items-center p-10">
     <div class="summary-box w-full max-w-3xl">
       <div class="grid grid-cols-2 gap-4">
         <div>
